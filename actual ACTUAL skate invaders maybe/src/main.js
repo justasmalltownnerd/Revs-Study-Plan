@@ -60,19 +60,19 @@ function create() {
     this.physics.pause();
     while(yayornay !== "yes")
     {
-        termtxt.Visible = true;
 
         const index = Math.floor(Math.random() * bigList.length);
-        var termtxt = this.add.text(0, 0, bigList[index][0]);
+        var termtxt = this.add.text(20, 10, bigList[index][0]);
+        termtxt.Visible = true;
+        var defintxt = this.add.text(30, 30, "Enter the correct definition: ");
         defintxt.Visible = true;
-        var defintxt = this.add.text(0, 0, "Enter the correct definition: ");
         defintxt.Visible = false;
         var def = prompt();
+        var deftxt= this.add.text(40, 50, def);
         deftxt.Visible = true;
-        var deftxt= this.add.text(10, 0, def);
         //display correct def
+        var isrightplease = this.add.text(30, 400, "Is this correct? Enter yes or no.");
         isrightplease.Visible = true;
-        var isrightplease = this.add.text(0, 0, "Is this correct? Enter yes or no.");
         var yayornay = prompt();
         termtxt.Visible = false;
         deftxt.Visible = false;
